@@ -22,7 +22,7 @@
 }
 
 .mask {
-	-webkit-mask-image: url('https://mdn.github.io/css-examples/masking/star.svg');
+	-webkit-mask-image: url('../../images/fighterJet.png');
   mask-image: url('https://mdn.github.io/css-examples/masking/star.svg');
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
@@ -32,7 +32,8 @@ img {
 	background-image: url('https://www.w3schools.com/css//img_5terre.jpg');
 	background-position: center;
 	background-size: cover;
-	min-height: 50vmin;
-	min-width: 50vmin;
+	min-height: 70vmin;
+	min-width: 70vmin;
 }
+
 
