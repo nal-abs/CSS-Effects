@@ -1,0 +1,38 @@
+.parallax {
+	color: red;
+	background-image: url('https://www.w3schools.com/howto/img_parallax.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 100vmin;
+}
+
+.paragraph {
+	height: 150px;
+	font-size: 36px;
+	background-color: transparent;
+}
+
+.image {
+	background-image: url('https://www.w3schools.com/css//img_5terre.jpg');
+	background-position: center;
+	background-size: cover;
+	min-height: 100vmin;
+	background-attachment: fixed;
+}
+
+.mask {
+	-webkit-mask-image: url('https://mdn.github.io/css-examples/masking/star.svg');
+  mask-image: url('https://mdn.github.io/css-examples/masking/star.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+img {
+	background-image: url('https://www.w3schools.com/css//img_5terre.jpg');
+	background-position: center;
+	background-size: cover;
+	min-height: 50vmin;
+	min-width: 50vmin;
+}
+
