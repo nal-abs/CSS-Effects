@@ -5,20 +5,15 @@ const component = {
 	title: 'CSS/Mask',
 	component: CssMask,
 	argTypes: {
-		URL: { control: 'radio', if: { arg: 'imageType', eq: 'url' },
+		image: { control: 'radio',
 			options: ['airplane.png',
 				'animate.svg',
 				'animatedWolf.png',
-				'semiTransparent.png'] },
-		LinearGradient: { control: 'radio',
-			if: { arg: 'imageType', eq: 'linear-gradient' },
-			options: ['linear-gradient'] },
-		imageType: {
-			type: 'select',	options: ['url', 'linear-gradient'],
-		},
+				'semiTransparent.png',
+				'linear-gradient'] },
 	},
 	args: {
-		imageType: 'url',
+		image: 'semiTransparent.png',
 	},
 };
 

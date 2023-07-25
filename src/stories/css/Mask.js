@@ -1,27 +1,35 @@
 import React from 'react';
-import svgImage from '../../images/SvgImage.svg';
-import pngImage from '../../images/fighterJet.png';
-import wolfImage from '../../images/wolf.png';
-import Butterfly from '../../images/Butterfly.png';
 
-const url = {
-	'airplane.png': pngImage,
-	'animate.svg': svgImage,
-	'animatedWolf.png': wolfImage,
-	'semiTransparent.png': Butterfly,
+const imagesType = {
+	'airplane.png': {
+		type: 'url',
+		image: '/fighterJet.png',
+	},
+	'animate.svg': {
+		type: 'url',
+		image: '/SvgImage.svg',
+	},
+	'animatedWolf.png': {
+		type: 'url',
+		image: '/wolf.png',
+	},
+	'semiTransparent.png': {
+		type: 'url',
+		image: '/semiTransparent.png',
+	},
+	'linear-gradient': {
+		type: 'linear-gradient',
+		image: 'to bottom, transparent 25%, black 75%',
+	},
 };
 
-const gradient = {
-	'linear-gradient': 'to bottom, transparent 25%, black 75%',
-};
-
-const Mask = ({ URL, imageType, LinearGradient }) => {
-	const type = URL || LinearGradient;
-	const img = URL ? url : gradient;
-
-	return <div className="mask" style={ { WebkitMaskImage: `${ imageType }(${ img[type] })` } }>
+const Mask = ({ image }) =>
+	<div
+		className="mask"
+		style={ { WebkitMaskImage:
+			`${ imagesType[image].type }(${ process.env.PUBLIC_URL }${ imagesType[image].image })` } }
+	>
 		<div className="backgroundMask"/>
 	</div>;
-};
 
 export default Mask;
