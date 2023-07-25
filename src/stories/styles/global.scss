@@ -22,14 +22,13 @@
 }
 
 .mask {
-	-webkit-mask-image: url('../../images/SvgImage.svg');
-  mask-image: url('https://mdn.github.io/css-examples/masking/star.svg');
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+	mask-size: 400px 300px
 }
 
 .backgroundMask {
-	background-image: url('https://www.w3schools.com/css//img_5terre.jpg');
+	background-image: url('https://assets.digitalocean.com/articles/alligator/css/masking/masking-example1.jpg');
 	background-position: center;
 	background-size: cover;
 	min-height: 70vmin;
