@@ -80,4 +80,16 @@
 .activeButton:active {
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
+.spotLight-background {
+	margin: 0;
+  height: 100vh;
+  background-image: url(https://since1979.dev/wp-content/uploads/2022/01/todd-quackenbush-x5SRhkFajrA-unsplash.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.spotLight {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsla(0,0%,0%, 0.9);
+}
 
