@@ -29,10 +29,10 @@
 
 @keyframes move {
 	from {
-		background-position: 0px;
+		mask-size: 0%;
 	}
 	to {
-		background-position: 500px;
+		mask-size: 100%;
 	}
 }
 
@@ -45,7 +45,7 @@
 	min-width: 70vmin;
 }
 
-.backgroundMask:hover {
+.mask:hover {
 	animation: move 5s linear;
 }
 
@@ -108,5 +108,44 @@
   background-color: hsla(0,0%,0%, 0.9);
 }
 
+.square {
+	height: 100px;
+	width: 100px;
+	background-color: red;
+	margin: 10%;
+	transition-property: background-color;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+}
+
+.square:hover {
+	background-color: blueviolet;
+}
+
+.linearGradient {
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(green), to(#a5c956));
+}
+
+.linearGradient-helper {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(red), to(yellow));
+  transition: opacity 3s linear;
+}
+
+.linearGradient:hover .linearGradient-helper {
+  opacity: 1;
+}
 
 
