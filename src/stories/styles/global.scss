@@ -148,4 +148,21 @@
   opacity: 1;
 }
 
+.book-parent {
+	display: flex;
+	width:300px;
+	align-items: stretch;
+}
+
+.book {
+		width: 100px;
+		height: 140px;
+		background: red;
+		margin: auto;
+		transition: all 3s linear;
+		color: white;
+}
+
+
+
 
