@@ -150,19 +150,32 @@
 
 .book-parent {
 	display: flex;
-	width:300px;
-	align-items: stretch;
+	width:500px;
 }
 
 .book {
 		width: 100px;
 		height: 140px;
+		text-align: center;
 		background: red;
-		margin: auto;
-		transition: all 3s linear;
+		transition: all 1.2s linear;
 		color: white;
+		.welcome {
+			opacity: 0;
+			transition:
+				opacity 0.1s 0.5s,
+				transform 0.4s 0.5s;
+		}
+		&:hover{
+			.welcome {
+      transform: translateX(0);
+      opacity: 1;
+    }
+		border-radius: 20px;
+		border: 5px solid black;
+		transition: 'all 5s border 2s'
 }
-
+}
 
 
 
