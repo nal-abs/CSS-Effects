@@ -151,20 +151,35 @@
 .book-parent {
 	display: flex;
 	width:500px;
+	justify-content: space-around;
 }
 
 .book {
 		width: 100px;
 		height: 140px;
 		text-align: center;
-		background: red;
+		background: black;
 		transition: all 1.2s linear;
 		color: white;
 		.welcome {
 			opacity: 0;
+			font-weight: 700;
+			font-family: Poppins, sans-serif;
 			transition:
 				opacity 0.1s 0.5s,
 				transform 0.4s 0.5s;
+		}
+		.fancy {
+			@supports (background-clip: text) {
+				background-image: linear-gradient(to right, orange, pink, yellow, red);
+				background-size: 110% auto;
+				background-position: center;
+				color: black;
+				background-clip: text;
+				font-size: larger;
+				-webkit-text-stroke-color: transparent;
+				-webkit-text-stroke-width: 2px;
+			}
 		}
 		&:hover{
 			.welcome {
@@ -172,8 +187,9 @@
       opacity: 1;
     }
 		border-radius: 20px;
-		border: 5px solid black;
-		transition: 'all 5s border 2s'
+		border: 5px solid rgb(13 230 190);
+		box-sizing: border-box;
+		transition: 'all 5s'
 }
 }
 
