@@ -196,9 +196,14 @@
 .fish-parent {
 	display: flex;
 	width: 500px;
-	background: #71b0a3;
 	justify-content: space-evenly;
-	margin: auto
+	margin: auto;
+	background: linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
+		linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
+		linear-gradient(315deg, black 25%, transparent 25%),
+		linear-gradient(45deg, black 25%, transparent 25%);
+	background-size: 1em 1em;
+	background-color: rgb(165 187 201);
 }
 
 .fish-eye {
@@ -207,6 +212,33 @@
 	background-image: url('https://www.w3schools.com/howto/img_parallax.jpg');
 	background-position: center;
 	background-size: cover;
+}
+
+.linear {
+	position: fixed;
+  top: -145%;
+  bottom: 0;
+  width: 100%;
+  background:
+    linear-gradient(15deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+    linear-gradient(25deg, transparent 50%, #ACCBC3 50%, #ACCBC3),
+    linear-gradient(35deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+    linear-gradient(45deg, transparent 50%, #F0909C 50%, #F0909C),
+    linear-gradient(55deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+    linear-gradient(65deg, transparent 50%, #FAD5CD 50%, #FAD5CD),
+    linear-gradient(75deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+    linear-gradient(85deg, transparent 50%, #25B4C4 50%, #25B4C4),
+    linear-gradient(95deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+    linear-gradient(105deg, transparent 50%, #F6B5A3 50%, #F6B5A3),
+    linear-gradient(115deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+    linear-gradient(125deg, transparent 50%, #ACCBC3 50%, #ACCBC3),
+    linear-gradient(135deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+    linear-gradient(145deg, transparent 50%, #F0909C 50%, #F0909C),
+    linear-gradient(155deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+    linear-gradient(165deg, transparent 50%, #FAD5CD 50%, #FAD5CD),
+    linear-gradient(175deg, transparent 50%, #F4F2E6 50%, #F4F2E6);
+  background-color: #F4F2E6;
+
 }
 
 
