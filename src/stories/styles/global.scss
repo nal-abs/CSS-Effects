@@ -193,5 +193,21 @@
 }
 }
 
+.fish-parent {
+	display: flex;
+	width: 500px;
+	background: #71b0a3;
+	justify-content: space-evenly;
+	margin: auto
+}
+
+.fish-eye {
+	width: 100px;
+	height: 100px;
+	background-image: url('https://www.w3schools.com/howto/img_parallax.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
 
 
