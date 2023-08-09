@@ -1,5 +1,3 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
-/* eslint-disable indent */
 import { range } from '@laufire/utils/collection';
 import React from 'react';
 import { Box } from '@mui/material';
@@ -14,9 +12,10 @@ const BookEffect = () =>
 				sx={ { 'transform': `rotate(${ (dummy + 1) * inclination }deg) scale(0.5, 0.5)`,
 					'&:hover': { transform: 'rotate(0deg) scale(1,1)' }} }
 				className="book"
-			>Hello!<Box
-				className="welcome fancy"
-				sx={ { color: 'black' } }
-			       >welcome</Box></Box></Box>)}</Box>;
+			>Hello!
+				<Box
+					className="welcome fancy"
+					sx={ { color: 'black' } }
+				>welcome</Box></Box></Box>)}</Box>;
 
 export default BookEffect;
