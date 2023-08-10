@@ -213,6 +213,9 @@
 	background-position: center;
 	background-size: cover;
 }
+.fish-eye:has(> .fish-parent) {
+	border: 5px solid red;
+}
 
 .linear {
 	position: fixed;
@@ -245,5 +248,53 @@
 	top: -100%
 }
 
+.parent {
+  display: flex;
+	width: 100vw;
+}
 
+.child1 {
+  width: 50%;
+  min-height: 100px;
+  background: green;
+	text-align: center;
+}
 
+.child2 {
+  width: 50%;
+  min-height: 100px;
+  background: red;
+	text-align: center;
+}
+
+.items {
+	height: 20vh;
+  display: flex;
+  background: darken(#333, 20%);
+  padding: 10px;
+  border-radius: 4px;
+	flex: 1;
+	transition: flex 5s;
+}
+
+.item {
+	flex: 1;
+	background: url('https://www.w3schools.com/howto/img_parallax.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+.item:hover {
+	flex: 3;
+	filter: sepia(100%)
+}
+
+.item:hover + .item {
+	flex: 2;
+	filter: blur(1px);
+}
+
+.item:has(+ .item:hover) {
+	flex: 2;
+	filter: blur(1px);
+}
