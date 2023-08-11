@@ -250,21 +250,7 @@
 
 .parent {
   display: flex;
-	width: 100vw;
-}
-
-.child1 {
-  width: 50%;
-  min-height: 100px;
-  background: green;
-	text-align: center;
-}
-
-.child2 {
-  width: 50%;
-  min-height: 100px;
-  background: red;
-	text-align: center;
+	justify-content: space-between;
 }
 
 .items {

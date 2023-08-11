@@ -1,34 +1,40 @@
 /* eslint-disable no-magic-numbers */
-/* eslint-disable max-lines-per-function */
 import { range } from '@laufire/utils/collection';
-import { rndString } from '@laufire/utils/random';
 import React, { useState } from 'react';
 
-const Height = () => {
-	const [childOne, setChildOne] = useState(0);
-	const [childTwo, setChildTwo] = useState(0);
-	const ListOne = range(0, childOne).map(() => rndString(5));
-	const ListTwo = range(0, childTwo).map(() => rndString(5));
+const getRandomColor = () => {
+	const letters = '0123456789ABCDEF';
+	let color = '#';
 
-	return (
-		<div className="parent">
-			<div className="child1">
-				<input
-					type="number"
-					value={ childOne }
-					onChange={ (evt) => setChildOne(evt.target.value) }
-				/>
-				{ListOne.map((list) => <div key={ list }>{list}</div>)}
-			</div>
-			<div className="child2">
-				<input
-					type="number"
-					value={ childTwo }
-					onChange={ (evt) => setChildTwo(evt.target.value) }
-				/>
-				{ListTwo.map((list) => <div key={ list }>{list}</div>)}
-			</div>
-		</div>);
+	for(let i = 0; i < 6; i++)
+		color += letters[Math.floor(Math.random() * 16)];
+
+	return color;
 };
 
-export default Height;
+const Input = ({ setColumns, columns }) =>
+	<input
+		type="number"
+		value={ columns }
+		onChange={ (evt) => setColumns(evt.target.value) }
+	/>;
+
+const SiblingHeightMatcher = () => {
+	const [columns, setColumns] = useState(0);
+
+	return (
+		<div>
+			<Input { ...{ columns, setColumns } }/>
+			<div className="parent">{range(0, columns).map((column) =>
+				<div
+					key={ column }
+					style={ { backgroundColor: getRandomColor() } }
+				>
+					The justify-content property aligns the flexible container
+					items when the items do not use
+					all available space on the main-axis
+				</div>)}
+			</div></div>);
+};
+
+export default SiblingHeightMatcher;
