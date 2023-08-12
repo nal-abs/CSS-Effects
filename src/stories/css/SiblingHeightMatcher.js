@@ -1,16 +1,6 @@
-/* eslint-disable no-magic-numbers */
 import { range } from '@laufire/utils/collection';
 import React, { useState } from 'react';
-
-const getRandomColor = () => {
-	const letters = '0123456789ABCDEF';
-	let color = '#';
-
-	for(let i = 0; i < 6; i++)
-		color += letters[Math.floor(Math.random() * 16)];
-
-	return color;
-};
+import getRandomColor from './Layout/helper/getRandomColor';
 
 const Input = ({ setColumns, columns }) =>
 	<input
