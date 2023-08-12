@@ -9,5 +9,8 @@
 
 .parent {
   display: flex;
-	justify-content: space-between;
+}
+
+.btn1 {
+  flex: 1 1 0;
 }
