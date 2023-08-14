@@ -12,7 +12,7 @@ const defaultConfig = [
 const Layout = ({ children, config = defaultConfig }) => {
 	const tiledConfig = tile(config, children.length);
 
-	return <div className="parent">
+	return <div className="layout">
 		{children.map((child, i) =>
 			<div
 				key={ i }

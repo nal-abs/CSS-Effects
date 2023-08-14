@@ -15,7 +15,7 @@ const SiblingHeightMatcher = () => {
 	return (
 		<div>
 			<Input { ...{ columns, setColumns } }/>
-			<div className="parent">{range(0, columns).map((column) =>
+			<div className="layout">{range(0, columns).map((column) =>
 				<div
 					key={ column }
 					style={ { backgroundColor: getRandomColor() } }
