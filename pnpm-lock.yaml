@@ -20,6 +20,7 @@ specifiers:
   '@testing-library/react': ^11.2.7
   '@testing-library/user-event': ^12.8.3
   babel-plugin-named-exports-order: ^0.0.2
+  clsx: ^2.0.0
   css-loader: ^6.8.1
   eslint: ^8.37.0
   eslint-plugin-react: ^7.32.2
@@ -42,6 +43,7 @@ dependencies:
   '@laufire/resist': 0.0.5
   '@laufire/utils': 2.9.2
   '@mui/material': 5.14.2_tcdmvkddfs54cu7bpa4n2kbgdm
+  clsx: 2.0.0
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-scripts: 5.0.1_z44lse2fqyjbjh527tnyhp67w4
@@ -6366,6 +6368,11 @@ packages:
 
   /clsx/1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /clsx/2.0.0:
+    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
     engines: {node: '>=6'}
     dev: false
 
