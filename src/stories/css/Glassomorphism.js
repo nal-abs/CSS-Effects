@@ -1,29 +1,39 @@
+import { find } from '@laufire/utils/collection';
 import clsx from 'clsx';
 import React from 'react';
 
-const backdropProperties = {
-	grayscale: 'grayscale(1)',
-	brightness: 'brightness(1.5)',
-	blur: 'blur(5px)',
-	contrast: 'contrast(0.8)',
-	dropShadow: 'dropShadow(4px 4px 10px blue)',
-	invert: 'invert(0.7)',
-	opacity: 'opacity(60%)',
-	sepia: 'sepia(90%)',
-	saturate: 'saturate(1.8)',
-	hueRotate: 'hueRotate(120deg)',
+const getBackground = (args) => {
+	const { background, image, linearGradient, color } = args;
+
+	return find({ image, linearGradient, color },
+		(ele, key) => background === key);
 };
 
-const getBackdrop = (styles) => styles.map((style) =>
-	backdropProperties[style]);
+const backdropFilters = {
+	none: () => 'none',
+	grayscale: ({ grayscale }) => `grayscale(${ grayscale })`,
+	brightness: ({ brightness }) => `brightness(${ brightness })`,
+	blur: ({ blur }) => `blur(${ blur }px)`,
+	contrast: ({ contrast }) => `contrast(${ contrast })`,
+	invert: ({ invert }) => `invert(${ invert })`,
+	opacity: ({ opacity }) => `opacity(${ opacity })`,
+	sepia: ({ sepia }) => `sepia(${ sepia }%)`,
+	saturate: ({ saturate }) => `saturate(${ saturate })`,
+	hueRotate: ({ hue }) => `hue-rotate(${ hue }deg)`,
+};
 
-const Glassmorphism = ({ styles }) => <div className="container">
+const getBackdrop = (args) => args.filters.map((filter) =>
+	backdropFilters[filter](args));
+
+const Glassomorphism = (args) =>
 	<div
-		className="box"
-		style={ { backdropFilter: clsx(getBackdrop(styles)) } }
+		className="glassomorphism"
+		style={ { background: getBackground(args) } }
 	>
-		<div>backdrop-filter: {styles}</div>
-	</div>
-</div>;
+		<div
+			className="glass-effect"
+			style={ { backdropFilter: clsx(getBackdrop(args)) } }
+		/>
+	</div>;
 
-export default Glassmorphism;
+export default Glassomorphism;

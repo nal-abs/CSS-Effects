@@ -284,66 +284,19 @@
 	filter: blur(1px);
 }
 
-.container {
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/0236.jpg');
-  background-size: cover;
+.glassomorphism {
+  background-size: cover !important;
   height: 60vh;
-  padding: 10px;
-  width: 60%;
+  width: 70%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.box {
+.glass-effect {
   border: 3px solid rgba(255,255,255,.7);
-  width: 200px;
-  min-height: 50vh;
-  line-height: 1;
-  padding: 15px 15px;
+  width: 50%;
+  height: 50vh;
 }
 
-// .none {
-//   backdrop-filter: none;
-// }
 
-// .grayscale {
-//   grayscale: grayscale(1),
-// 	brightness: brightness(1.5),
-// 	blur: blur(5px),
-// 	contrast: contrast(0.8),
-// 	drop-shadow: drop-shadow(4px 4px 10px blue),
-// 	invert: invert(0.7),
-// 	opacity: opacity(60%),
-// 	sepia: sepia(90%),
-// 	saturate: saturate(1.8),
-// 	hue-rotate: hue-rotate(120deg)
-
-// }
-// .brightness {
-//   backdrop-filter: brightness(1.5);
-// }
-// .blur {
-//   backdrop-filter: blur(5px);
-// }
-// .contrast {
-//   backdrop-filter: contrast(.8);
-// }
-// .drop-shadow {
-//   backdrop-filter: drop-shadow(4px 4px 10px blue);
-// }
-// .invert {
-//   backdrop-filter: invert(.7);
-// }
-// .opacity {
-//   backdrop-filter: opacity(60%);
-// }
-// .sepia {
-//   backdrop-filter: sepia(90%);
-// }
-// .saturate {
-//   backdrop-filter: saturate(1.8);
-// }
-// .hue-rotate {
-//   backdrop-filter: hue-rotate(120deg);
-// }
