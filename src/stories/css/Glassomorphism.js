@@ -1,13 +1,5 @@
-import { find } from '@laufire/utils/collection';
 import clsx from 'clsx';
 import React from 'react';
-
-const getBackground = (args) => {
-	const { background, image, linearGradient, color } = args;
-
-	return find({ image, linearGradient, color },
-		(ele, key) => background === key);
-};
 
 const backdropFilters = {
 	none: () => 'none',
@@ -25,10 +17,10 @@ const backdropFilters = {
 const getBackdrop = (args) => args.filters.map((filter) =>
 	backdropFilters[filter](args));
 
-const Glassomorphism = (args) =>
+const Glassomorphism = ({ background, ...args }) =>
 	<div
 		className="glassomorphism"
-		style={ { background: getBackground(args) } }
+		style={ { background: args[background] } }
 	>
 		<div
 			className="glass-effect"

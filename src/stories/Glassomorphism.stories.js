@@ -1,9 +1,9 @@
 import React from 'react';
-import CssGlassomorphism from './css/Glassomorphism.js';
+import CSSGlassomorphism from './css/Glassomorphism.js';
 
 const component = {
 	title: 'CSS/Glassomorphism',
-	component: CssGlassomorphism,
+	component: CSSGlassomorphism,
 	argTypes: {
 		filters: {
 			control: 'check',
@@ -56,6 +56,18 @@ const component = {
 			type: 'string',
 			if: { arg: 'background', eq: 'color' },
 		},
+		linearGradientOne: {
+			control: {
+				type: 'color',
+			},
+			if: { arg: 'background', eq: 'linearGradient' },
+		},
+		linearGradientTwo: {
+			control: {
+				type: 'color',
+			},
+			if: { arg: 'background', eq: 'linearGradient' },
+		},
 	},
 	args: {
 		filters: ['blur'],
@@ -71,17 +83,20 @@ const component = {
 		image:
 		'url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/0236.jpg)',
 		color: 'red',
-		linearGradient:
-		'radial-gradient(at 47% 33%, transparent 10%, yellow 75%)',
+		linearGradientOne: 'green',
+		linearGradientTwo: 'yellow',
 	},
 };
 
 export default component;
 
-const Template = (args) =>
-	<CssGlassomorphism { ...args }/>;
+const Template = (args) => {
+	const { linearGradientOne, linearGradientTwo, background } = args;
+	const linearGradient = background === 'linearGradient'
+		&& `linear-gradient(45deg, transparent 39%, ${ linearGradientOne } 61%),
+				linear-gradient(125deg, ${ linearGradientTwo } 45%, transparent 55%)`;
+
+	return <CSSGlassomorphism { ...{ ...args, linearGradient } }/>;
+};
 
 export const Glassomorphism = Template.bind({});
-
-Glassomorphism.args = {
-};
