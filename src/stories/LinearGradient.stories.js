@@ -1,5 +1,5 @@
 import React from 'react';
-import CssLinearGradient from './css/LinearGradient.js';
+import CssLinearGradient from '../components/LinearGradient.js';
 
 const component = {
 	title: 'CSS/LinearGradient',

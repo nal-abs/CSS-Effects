@@ -1,5 +1,5 @@
 import React from 'react';
-import CssSpinner from './css/Spinner.js';
+import CssSpinner from '../components/Spinner.js';
 
 const component = {
 	title: 'CSS/Spinner',

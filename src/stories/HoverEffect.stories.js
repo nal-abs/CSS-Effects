@@ -1,5 +1,5 @@
 import React from 'react';
-import CssHoverEffect from './css/HoverEffect';
+import CssHoverEffect from '../components/HoverEffect';
 
 const component = {
 	title: 'CSS/HoverEffect',

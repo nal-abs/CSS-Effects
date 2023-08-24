@@ -1,5 +1,5 @@
 import React from 'react';
-import CSSGlassomorphism from './css/Glassomorphism.js';
+import CSSGlassomorphism from '../components/Glassomorphism.js';
 
 const component = {
 	title: 'CSS/Glassomorphism',
@@ -70,13 +70,13 @@ const component = {
 		},
 	},
 	args: {
-		filters: ['blur'],
+		filters: ['blur', 'opacity', 'saturate'],
 		blur: 6,
 		sepia: 0,
-		opacity: 0,
+		opacity: 0.5,
 		contrast: 0,
 		brightness: 1.5,
-		saturate: 100,
+		saturate: 10,
 		hue: 170,
 		grayscale: 1,
 		background: 'image',

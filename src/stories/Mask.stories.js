@@ -1,5 +1,5 @@
 import React from 'react';
-import CssMask from './css/Mask.js';
+import CssMask from '../components/Mask.js';
 
 const component = {
 	title: 'CSS/Mask',

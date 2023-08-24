@@ -1,5 +1,5 @@
 import React from 'react';
-import CssBookEffect from './css/BookTransition.js';
+import CssBookEffect from '../components/BookTransition.js';
 
 const component = {
 	title: 'CSS/BookEffect',

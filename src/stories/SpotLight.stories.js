@@ -1,5 +1,5 @@
 import React from 'react';
-import CssSpotLight from './css/SpotLight.js';
+import CssSpotLight from '../components/SpotLight.js';
 
 const component = {
 	title: 'CSS/SpotLight',

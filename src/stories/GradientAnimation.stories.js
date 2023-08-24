@@ -1,5 +1,5 @@
 import React from 'react';
-import CssAnimation from './css/GradientAnimation.js';
+import CssAnimation from '../components/GradientAnimation.js';
 
 const component = {
 	title: 'CSS/Animation',

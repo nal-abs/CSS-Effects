@@ -1,5 +1,5 @@
 import React from 'react';
-import CssSiblingHeight from './css/SiblingHeightMatcher.js';
+import CssSiblingHeight from '../components/SiblingHeightMatcher.js';
 
 const component = {
 	title: 'CSS/SiblingHeight',

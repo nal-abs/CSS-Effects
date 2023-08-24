@@ -1,5 +1,5 @@
 import React from 'react';
-import CssFishEye from './css/FishEyeEffect.js';
+import CssFishEye from '../components/FishEyeEffect.js';
 
 const component = {
 	title: 'CSS/FishEye',

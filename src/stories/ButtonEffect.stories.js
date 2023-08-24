@@ -1,5 +1,5 @@
 import React from 'react';
-import CssButton from './css/ButtonEffect.js';
+import CssButton from '../components/ButtonEffect.js';
 
 const component = {
 	title: 'CSS/Button',

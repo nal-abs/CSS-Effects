@@ -1,6 +1,6 @@
 import React from 'react';
-import CssLayout from './css/Layout/index';
-import getRandomColor from './css/Layout/helper/getRandomColor';
+import CssLayout from '../components/Layout/index';
+import getRandomColor from '../components/Layout/helper/getRandomColor';
 
 const component = {
 	title: 'CSS/Layout',

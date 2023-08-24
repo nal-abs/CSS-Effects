@@ -1,5 +1,5 @@
 import React from 'react';
-import CssParallax from './css/Parallax';
+import CssParallax from '../components/Parallax';
 
 const component = {
 	title: 'CSS/Parallax',
