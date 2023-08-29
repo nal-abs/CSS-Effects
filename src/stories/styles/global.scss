@@ -22,8 +22,8 @@
 }
 
 .mask {
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
 	mask-size: 400px 300px;
 }
 
@@ -31,6 +31,7 @@
 	from {
 		mask-size: 0%;
 	}
+
 	to {
 		mask-size: 100%;
 	}
@@ -51,61 +52,61 @@
 
 
 .spinner {
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #3498db;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
+	border: 16px solid #f3f3f3;
+	border-top: 16px solid #3498db;
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-  0% {
+	0% {
 		transform: rotate(0deg);
 	}
-  100% {
+
+	100% {
 		transform: rotate(360deg);
-	 }
+	}
 }
 
 .background-link {
 	width: fit-content;
 	background:
-    linear-gradient(
-      to right,
-      rgba(100, 200, 200, 1),
+		linear-gradient(to right,
 			rgba(100, 200, 200, 1),
-    ),
-    linear-gradient(
-      to right,
-      rgba(255, 0, 0, 1),
-      rgba(255, 0, 180, 1),
-      rgba(0, 100, 200, 1)
-  );
-  background-size: 100% 3px, 0 3px;
-  background-position: 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 400ms;
+			rgba(100, 200, 200, 1),
+		),
+		linear-gradient(to right,
+			rgba(255, 0, 0, 1),
+			rgba(255, 0, 180, 1),
+			rgba(0, 100, 200, 1));
+	background-size: 100% 3px, 0 3px;
+	background-position: 100% 100%, 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 400ms;
 }
 
 .background-link:hover {
-  background-size: 0 3px, 100% 3px;
+	background-size: 0 3px, 100% 3px;
 }
 
 .activeButton:active {
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
+
 .spotLight-background {
 	margin: 0;
-  height: 100vh;
-  background-image: url(https://since1979.dev/wp-content/uploads/2022/01/todd-quackenbush-x5SRhkFajrA-unsplash.jpg);
-  background-position: center center;
-  background-size: cover;
+	height: 100vh;
+	background-image: url(https://since1979.dev/wp-content/uploads/2022/01/todd-quackenbush-x5SRhkFajrA-unsplash.jpg);
+	background-position: center center;
+	background-size: cover;
 }
+
 .spotLight {
-  width: 100vw;
-  height: 100vh;
-  background-color: hsla(0,0%,0%, 0.9);
+	width: 100vw;
+	height: 100vh;
+	background-color: hsla(0, 0%, 0%, 0.9);
 }
 
 .square {
@@ -114,8 +115,8 @@
 	background-color: red;
 	margin: 10%;
 	transition-property: background-color;
-  transition-duration: 2s;
-  transition-timing-function: linear;
+	transition-duration: 2s;
+	transition-timing-function: linear;
 }
 
 .square:hover {
@@ -123,11 +124,11 @@
 }
 
 .linearGradient {
-  position: absolute;
-  z-index: 1;
-  display: inline-block;
-  width: 100px;
-  height: 100px;
+	position: absolute;
+	z-index: 1;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -135,62 +136,66 @@
 }
 
 .linearGradient-helper {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  background-image: linear-gradient(to bottom, red, yellow);
-  transition: opacity 3s linear;
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-image: linear-gradient(to bottom, red, yellow);
+	transition: opacity 3s linear;
 }
 
 .linearGradient:hover .linearGradient-helper {
-  opacity: 1;
+	opacity: 1;
 }
 
 .book-parent {
 	display: flex;
-	width:500px;
+	width: 500px;
 	justify-content: space-around;
 }
 
 .book {
-		width: 100px;
-		height: 140px;
-		text-align: center;
-		background: black;
-		transition: all 1.2s linear;
-		color: white;
+	width: 100px;
+	height: 140px;
+	text-align: center;
+	background: black;
+	transition: all 1.2s linear;
+	color: white;
+
+	.welcome {
+		opacity: 0;
+		font-weight: 700;
+		font-family: Poppins, sans-serif;
+		transition:
+			opacity 0.1s 0.5s,
+			transform 0.4s 0.5s;
+	}
+
+	.fancy {
+		@supports (background-clip: text) {
+			background-image: linear-gradient(to right, orange, pink, yellow, red);
+			background-size: 110% auto;
+			background-position: center;
+			color: black;
+			background-clip: text;
+			font-size: larger;
+			-webkit-text-stroke-color: transparent;
+			-webkit-text-stroke-width: 2px;
+		}
+	}
+
+	&:hover {
 		.welcome {
-			opacity: 0;
-			font-weight: 700;
-			font-family: Poppins, sans-serif;
-			transition:
-				opacity 0.1s 0.5s,
-				transform 0.4s 0.5s;
+			transform: translateX(0);
+			opacity: 1;
 		}
-		.fancy {
-			@supports (background-clip: text) {
-				background-image: linear-gradient(to right, orange, pink, yellow, red);
-				background-size: 110% auto;
-				background-position: center;
-				color: black;
-				background-clip: text;
-				font-size: larger;
-				-webkit-text-stroke-color: transparent;
-				-webkit-text-stroke-width: 2px;
-			}
-		}
-		&:hover{
-			.welcome {
-      transform: translateX(0);
-      opacity: 1;
-    }
+
 		border-radius: 20px;
 		border: 5px solid rgb(13 230 190);
 		box-sizing: border-box;
 		transition: 'all 5s'
-}
+	}
 }
 
 .fish-parent {
@@ -213,34 +218,35 @@
 	background-position: center;
 	background-size: cover;
 }
+
 .fish-eye:has(> .fish-parent) {
 	border: 5px solid red;
 }
 
 .linear {
 	position: fixed;
-  top: -145%;
-  bottom: 0;
-  width: 100%;
-  background-image:
-    linear-gradient(15deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
-    linear-gradient(25deg, transparent 50%, #ACCBC3 50%, #ACCBC3),
-    linear-gradient(35deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
-    linear-gradient(45deg, transparent 50%, #F0909C 50%, #F0909C),
-    linear-gradient(55deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
-    linear-gradient(65deg, transparent 50%, #FAD5CD 50%, #FAD5CD),
-    linear-gradient(75deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
-    linear-gradient(85deg, transparent 50%, #25B4C4 50%, #25B4C4),
-    linear-gradient(95deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
-    linear-gradient(105deg, transparent 50%, #F6B5A3 50%, #F6B5A3),
-    linear-gradient(115deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
-    linear-gradient(125deg, transparent 50%, #ACCBC3 50%, #ACCBC3),
-    linear-gradient(135deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
-    linear-gradient(145deg, transparent 50%, #F0909C 50%, #F0909C),
-    linear-gradient(155deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
-    linear-gradient(165deg, transparent 50%, #FAD5CD 50%, #FAD5CD),
-    linear-gradient(175deg, transparent 50%, #F4F2E6 50%, #F4F2E6);
-  background-color: #F4F2E6;
+	top: -145%;
+	bottom: 0;
+	width: 100%;
+	background-image:
+		linear-gradient(15deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+		linear-gradient(25deg, transparent 50%, #ACCBC3 50%, #ACCBC3),
+		linear-gradient(35deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+		linear-gradient(45deg, transparent 50%, #F0909C 50%, #F0909C),
+		linear-gradient(55deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+		linear-gradient(65deg, transparent 50%, #FAD5CD 50%, #FAD5CD),
+		linear-gradient(75deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+		linear-gradient(85deg, transparent 50%, #25B4C4 50%, #25B4C4),
+		linear-gradient(95deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+		linear-gradient(105deg, transparent 50%, #F6B5A3 50%, #F6B5A3),
+		linear-gradient(115deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+		linear-gradient(125deg, transparent 50%, #ACCBC3 50%, #ACCBC3),
+		linear-gradient(135deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+		linear-gradient(145deg, transparent 50%, #F0909C 50%, #F0909C),
+		linear-gradient(155deg, transparent 50%, #F4F2E6 50%, #F4F2E6),
+		linear-gradient(165deg, transparent 50%, #FAD5CD 50%, #FAD5CD),
+		linear-gradient(175deg, transparent 50%, #F4F2E6 50%, #F4F2E6);
+	background-color: #F4F2E6;
 	transition: top 10s;
 }
 
@@ -249,15 +255,15 @@
 }
 
 .layout {
-  display: flex;
+	display: flex;
 }
 
 .items {
 	height: 20vh;
-  display: flex;
-  background: darken(#333, 20%);
-  padding: 10px;
-  border-radius: 4px;
+	display: flex;
+	background: darken(#333, 20%);
+	padding: 10px;
+	border-radius: 4px;
 	flex: 1;
 	transition: flex 5s;
 }
@@ -274,7 +280,7 @@
 	filter: sepia(100%)
 }
 
-.item:hover + .item {
+.item:hover+.item {
 	flex: 2;
 	filter: blur(1px);
 }
@@ -285,18 +291,44 @@
 }
 
 .glassomorphism {
-  background-size: cover !important;
-  height: 60vh;
-  width: 70%;
+	background-size: cover !important;
+	height: 60vh;
+	width: 70%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .glass-effect {
-  border: 3px solid rgba(255,255,255,.7);
-  width: 50%;
-  height: 50vh;
+	border: 3px solid rgba(255, 255, 255, .7);
+	width: 50%;
+	height: 50vh;
 }
 
+.parallax-threeD {
+	width: 200px;
+	display: grid;
+	margin: auto;
+	aspect-ratio: 1;
+	transform: perspective(400px) rotateY(8deg);
+	transition: .5s;
+	overflow: hidden;
+	border: 2px solid black;
+}
 
+.parallax-d {
+	width: 120%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+	transition: .5s;
+};
+
+.parallax-threeD:hover {
+	transform: perspective(400px) rotateY(-8deg) scaleX(2);
+
+
+	.parallax-d {
+		transform: translateX(-16.33%);
+	}
+}
