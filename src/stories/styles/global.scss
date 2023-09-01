@@ -332,3 +332,21 @@
 		transform: translateX(-16.33%);
 	}
 }
+
+.website {
+	background-image: url('../../../public/website.png');
+	background-position: center;
+	background-size: cover;
+	height: 90vh;
+
+	.website-glass-effect {
+		border: 3px solid rgba(255, 255, 255, .7);
+		min-width: 30%;
+		min-height: 25vh;
+		transform: rotate(-20deg);
+		border-radius: 1rem;
+    backdrop-filter: blur(10px) opacity(0.1);
+    filter: drop-shadow(2px 2px 2px orange);
+    background-color: rgba(255,255,255,.5);
+	}
+}
