@@ -1,17 +1,10 @@
 import { React } from 'react';
 import './App.scss';
-import Layout from './stories/css/Layout';
-
-const children = ['Hi all welcome to react-web-components', 'B', 'C', 'D'];
+import SpringParallax from './components/SpringParallax';
 
 const App = () =>
 	<div className="App">
-		<Layout>
-			{children.map((child, i) =>
-				<div
-					key={ i }
-				>{child}</div>)}
-		</Layout>
+		<SpringParallax/>
 	</div>;
 
 export default App;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Perspective = () => <div className="scroll">
+const Perspective = () => <div className="">
 	<div className="parallax-layer layer1">LAYER 1</div>
 	<div className="parallax-layer
 layer2"
