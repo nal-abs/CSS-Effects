@@ -2,9 +2,9 @@ import { React } from 'react';
 import './App.scss';
 import SpringParallax from './components/SpringParallax';
 
-const App = () =>
+const App = (context) =>
 	<div className="App">
-		<SpringParallax/>
+		<SpringParallax { ...context }/>
 	</div>;
 
 export default App;
