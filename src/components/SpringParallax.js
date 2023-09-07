@@ -5,15 +5,14 @@ import Shapes from './Shapes';
 
 const SpringParallax = (context) =>
 	<div className="spring-parallax">
-		<Parallax pages={ 2 }>
+		<Parallax pages={ 1 }>
 			<ParallaxLayer
 				className="center"
 				sticky={ { start: 0, end: 1 } }
-				style={ { zIndex: 2 } }
 			>
 				<GlassLayer/>
+				<Shapes { ...context }/>
 			</ParallaxLayer>
-			<Shapes { ...context }/>
 		</Parallax></div>;
 
 export default SpringParallax;

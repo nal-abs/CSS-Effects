@@ -4,7 +4,7 @@ import { ParallaxLayer } from '@react-spring/parallax';
 
 const GlassLayer = () =>
 	<div className="glass-effect">
-		<ParallaxLayer offset={ 0.5 } speed={ 0.7 }>
+		<ParallaxLayer offset={ 0.5 } speed={ 1.5 } style={ { zIndex: 2 } }>
 			<p>ParagraphParagraphs are the group
 				of sentences combined together, about a certain topic.
 				It is a very important form of writing as we write almost everything
@@ -15,6 +15,7 @@ const GlassLayer = () =>
 				Paragraphs are blocks of textual content that segment out a larger
 				piece of writing—stories, novels, articles, creative writing,
 				or professional writing portions—making it less complicated.
-			</p></ParallaxLayer></div>;
+			</p></ParallaxLayer>
+	</div>;
 
 export default GlassLayer;
