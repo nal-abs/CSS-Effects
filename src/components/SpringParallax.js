@@ -1,35 +1,17 @@
 import React from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-
-const getStyle = ({ x, y, size, radius, rotate }) => ({
-	rotate: `${ rotate }deg`,
-	left: `${ x }%`,
-	top: `${ y }%`,
-	transform: `scale(${ size })`,
-	borderRadius: `${ radius }%`,
-});
-
-const Shapes = ({ config: { shapes }}) => shapes.map((shape, i) =>
-	<ParallaxLayer
-		key={ i }
-		offset={ shape.offset }
-		speed={ shape.speed }
-		style={ { zIndex: `${ shape.position }` } }
-	>
-		<div
-			className="spring-square"
-			style={ getStyle(shape) }
-		/></ParallaxLayer>);
+import GlassLayer from './GlassLayer';
+import Shapes from './Shapes';
 
 const SpringParallax = (context) =>
 	<div className="spring-parallax">
 		<Parallax pages={ 2 }>
 			<ParallaxLayer
-				offset={ 0 }
-				speed={ 0.06 }
 				className="center"
+				sticky={ { start: 0, end: 1 } }
+				style={ { zIndex: 2 } }
 			>
-				<div className="glass-effect"/>
+				<GlassLayer/>
 			</ParallaxLayer>
 			<Shapes { ...context }/>
 		</Parallax></div>;
