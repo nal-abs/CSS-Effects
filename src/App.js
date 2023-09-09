@@ -1,10 +1,10 @@
 import { React } from 'react';
 import './App.scss';
-import SpringParallax from './components/SpringParallax';
+import ZoomByScroll from './components/ZoomByScroll';
 
 const App = (context) =>
 	<div className="App">
-		<SpringParallax { ...context }/>
+		<ZoomByScroll/>
 	</div>;
 
 export default App;
