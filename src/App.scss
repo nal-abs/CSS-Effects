@@ -31,7 +31,7 @@
 		border-radius: 1rem;
 		background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px) saturate(50%);
-    box-shadow: 0 10px 20px rgba(141, 138, 138, 0.5);
+    box-shadow: 0 10px 20px rgba(19, 15, 15, 0.5);
 		transition: .5s;
 		overflow: hidden;
 	}
@@ -52,15 +52,17 @@
 	justify-content: center;
 }
 
-.body {
-  background-color: #171717;
+.ZoomByScroll {
+	background-image: url("../public/backgroundOne.png");
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
+	background-size: cover;
+	background-position: center;
 }
 
-.full__page {
-  width: 100vw;
+.page {
+  width: 98vw;
   height: 100vh;
 }
 
@@ -82,16 +84,20 @@
 }
 
 .dot {
-  background-color: orange;
+	background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(10px) saturate(50%);
+	box-shadow: 0 10px 20px rgba(19, 15, 15, 0.5);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+	border: 1px solid rgba(255, 255, 255, .7);
 }
 
 .title {
   color: rgb(5, 74, 238);
   font-size: 8vw;
-  padding-left: 8vw;
+  padding: 8vw;
+
 
   & > span {
     display: block;

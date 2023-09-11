@@ -2,7 +2,7 @@ import { React } from 'react';
 import './App.scss';
 import ZoomByScroll from './components/ZoomByScroll';
 
-const App = (context) =>
+const App = () =>
 	<div className="App">
 		<ZoomByScroll/>
 	</div>;
